@@ -2,12 +2,12 @@ import React from "react";
 import "./directory.styles.scss";
 
 import MenuItem from "../menu-item/menu-item.component";
-import directoryData from "./directory.data";
+import DIRECTORY_DATA from "./directory.data";
 
 class Directory extends React.Component {
   constructor() {
     super();
-    this.state = { sections: directoryData };
+    this.state = { sections: DIRECTORY_DATA };
   }
 
   render() {
