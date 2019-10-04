@@ -7,7 +7,6 @@ import { connect } from "react-redux";
 import { setCurrentUser } from "./redux/user/user.action";
 import { selectCurrentUser } from "./redux/user/user.selectors";
 import { createStructuredSelector } from "reselect";
-import { selectCollectionsForPreview } from "./redux/shop/shop.selectors";
 
 import HomePage from "./pages/homepage/homepage.component";
 import ShopPage from "./pages/shop/shop.component";
@@ -32,10 +31,6 @@ class App extends React.Component {
         });
       }
       setCurrentUser(userAuth);
-      addCollectionAndDocuments(
-        "collections",
-        collectionsArray.map(({ title, items }) => ({ title, items }))
-      );
     });
   }
 
